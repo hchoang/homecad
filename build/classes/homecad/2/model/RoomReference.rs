@@ -1,0 +1,1 @@
+homecad.model.RoomReference

@@ -1,0 +1,91 @@
+--- Test 1 --------------------------
+Initialising HomeCAD engine with owner: Test Owner, and budget 1000...
+Owner string is: Test Owner:1000:1000 ... correct
+--- Test 2 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 1000...
+Creating first room...Creating second room...Creating third room...Finding first room with getRoom()... OK
+Finding second room with getRoom()... OK
+Finding third room with getRoom()... OK
+Checking rooms with getAllRooms()... OK
+Checking rooms with getStoreyRooms()... OK
+--- Test 3 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 1000...
+Creating first room...Creating second room...Removing first room with removeRoom()...Checking rooms with getAllRooms()... OK
+Removing second room with removeRoom()...
+Checking rooms with getRoom()...
+Checking rooms with getAllRooms()...
+Checking rooms with getStoreyRooms()...
+--- Test 4 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 1000...
+Creating a room...Adding first item... OK
+Adding second item... OK
+Adding item to 'unknown' room ... OK
+Checking items in the room... OK
+--- Test 5 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 1000...
+Creating a room...Adding first item... OK
+Adding second item... OK
+Checking items in the room... OK
+Removing item that doesn't exist... OK
+Checking items in the room... OK
+Removing item that does exist... OK
+Checking items in the room... OK
+--- Test 6 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 2000...
+Creating first room...Creating second room...Creating third room...Adding first exit point... OK
+Adding second exit point...--- Test 7 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 2000...
+Creating first room...Creating second room...Creating third room...Adding first exit point... OK
+Adding second exit point...--- Test 8 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 10000...
+Checking empty house size ... correct
+Creating first room...Creating second room...Creating third room...Checking size of the house
+ The total size of the house is 775m3 ... correct
+Checking storey size
+ The total size of the storey 1 is 774m3 ... correct
+--- Test 9 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 10000...
+Checking empty house cost ... correct
+Creating first room...Creating second room...Creating third room...Adding first item... OK
+Adding second item... OK
+Checking cost of the house
+ The total cost of the house is 2865$ ... correct
+Checking storey cost
+ The total cost of the storey 1 is 2855$ ... correct
+Checking room cost
+ The  cost of the room is 355$ ... correct
+--- Test 10 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 10000...
+Adding room to invalid reference...STRUCTURAL HOUSE SUPPORT ERROR  ... correct
+Creating first room... Creating 'duplicate' room... DUPLICATE ROOM ERROR  ... correct
+Removing non-existent room... ROOM DOES NOT EXIST ERROR  ... correct
+--- Test 11 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 10000...
+Creating first room...Creating second room...Adding unsupported room ...STRUCTURAL HOUSE SUPPORT ERROR  ... correct
+Creating valid third room...Checking rooms with getAllRooms()... OK
+Removing first 'support' room ...STRUCTURAL HOUSE SUPPORT ERROR  ... correct
+Checking that room wasn't removed ...
+Removing second room with removeRoom()...Checking rooms with getStoreyRooms()... OK
+--- Test 12 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 1000...
+Creating first room...Creating second room...Adding first item... OK
+Adding second item... OK
+Owner string is: TEST OWNER:1000:45 ... correct
+Removing item...
+Owner string is: TEST OWNER:1000:85 ... correct
+Removing room ...
+Owner string is: TEST OWNER:1000:400 ... correct
+--- Test 13 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 1000...
+Creating first room...Creating second room...
+Creating third room - 'overlimit' INSUFFICIENT BUDGET ERROR  ... correct
+Adding item - 'overlimit' INSUFFICIENT BUDGET ERROR  ... correct
+Owner string is: TEST OWNER:1000:380 ... correct
+--- Test 14 --------------------------
+Initialising HomeCAD engine with owner: TEST OWNER, and budget 10000...
+Creating a room...Adding an item... OK
+Checking rooms with getAllRooms()... OK
+Check owner string...Owner string is: TEST OWNER:10000:500 ... correct
+***RESET***
+Checking rooms with getAllRooms()...... correct
+Check owner string...Owner string is: TEST OWNER:10000:10000 ... correct
